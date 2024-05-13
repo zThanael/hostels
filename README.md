@@ -10,10 +10,14 @@
             <li> <a href='#contexto'> Contexto </a> </li>
             <li> <a href='#problema'> Problemática </a> </li>
             <li> <a href='#objetivo'> Objetivo </a> </li>
-            <li> <a href='#objetivo'> Objetivo </a> </li>
         </ul>
     </li>
-    <li> <a href='desenvolvimento'> Desenvolvimento </a>
+    <li> 
+        <a href='desenvolvimento'> Desenvolvimento </a>
+        <ul>
+            <li> <a href='#pipeline'> Data Pipeline  </a> </li>
+        </ul>
+    </li>
 </ul>
 
 <hr>
@@ -87,7 +91,7 @@
 
 <hr>
 
-<h3 id='contexto'> Pipeline de dados do Projeto  </h3>
+<h3 id='pipeline'> Data Pipeline  </h3>
 <p>
     Segue abaixo a arquitetura do pipeline de dados referente a este projeto.
 </p>
