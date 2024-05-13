@@ -104,3 +104,33 @@
 </p>
 
 <hr>
+
+<h3 id = 'der'> ETL - Extract, Transform and Load</h3>
+<ul>
+    <li>  
+        <b> Extract </b>: Os dados usados para este projeto foram obtidos do Kaggle em: <a href='https://www.kaggle.com/datasets/felipejardimf/hotel-reviews-hostelworld'> Hotel Reviews - Hostelworld </a> 
+    </li>
+    <br>
+    <li> 
+        <b> Transform </b>: Os dados crus não são adequados para o nosso objetivo, portanto foi necessário realizar as tratativas nos dados e principalmente criar a modelagem mais adequada para o Projeto <br>
+        <i> Todo o processo foi documentado em <a href='https://github.com/zThanael/hostels/blob/main/etl_hostel.ipynb'> etl_hostel.ipynb </a> </i>
+    </li>
+    <br>
+    <li> 
+        <b> Load </b>: Após as devidas transformações nos dados eles foram inseridos em um Banco PostgreSQL instânciado em um RDS na AWS
+    </li>
+
+</ul>
+<hr> 
+
+<h3 id = 'der'> DER - Diagrama de Entidade e Relacionamentos </h3>
+<p>
+    A modelagem dos dados consite em: 
+</p>
+<img src='DER.png'>
+<p> 
+    Como a tabela principal <b> hostelworld_hostel </b> possui poucos dados (40.000) e não aumentará mais, não vejo a necessidade de normaliza-la.
+</p>
+<p> 
+    Porém, em relação as facilidades de cada Hostel precisei normalizar os dados devido a quantidade, portanto para otimizar o armazenamento dos dados e o desempenho visto que estou usando o Free Tier da AWS, normalizei a tabela <b> hostelworld_hostel_facilities </b> ( <b>880.000 registros </b>) transformando-a em uma tabela fato similar a arquitetura <b> Star Schema </b>.
+</p>
