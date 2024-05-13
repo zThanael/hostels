@@ -5,9 +5,25 @@
 
 <h3> Sumário </h3>
 <ul>
-    <li> <a href='#contexto'> Contexto </a> </li>
-    <li> <a href='#problema'> Problemática </a> </li>
+    <li> <a href='info'> Informações Gerais </a>
+        <ul>
+            <li> <a href='#contexto'> Contexto </a> </li>
+            <li> <a href='#problema'> Problemática </a> </li>
+            <li> <a href='#objetivo'> Objetivo </a> </li>
+            <li> <a href='#objetivo'> Objetivo </a> </li>
+        </ul>
+    </li>
+    <li> <a href='desenvolvimento'> Desenvolvimento </a>
 </ul>
+
+<hr>
+
+<br>
+
+<h2 id='info'> Informações Gerais  </h2>
+<p>
+    Aqui estão as informações básicas para compreender melhor o escopo deste projeto, bem como sua finalidade.
+</p>
 
 <hr>
 
@@ -49,4 +65,38 @@
 <p>
     Por exemplo, estou planejando minhas viagens para o Peru, e é dificil descobrir quais cidades possuêm hostels, principalmente no HostelWorld pois precisa por cidade. Mas meu objetivo é descobrir quais cidades do Peru que possuem hostels...
 </p>
+
+<hr>
+
+<h3 id = 'objetivo'> Objetivo </h3>
+<p>
+    <b> Facilitar a vida de quem procura por Hostels, no caso a minha própria 😅.</b>
+</p>
+<p>
+    Criando uma forma simples de pesquisar por hostels, ao colocar um país/cidade obter todos os hostels que existem naquela localização.
+</p>
+
+<hr>
+
+<br>
+
+<h2 id='info'> Desenvolvimento  </h2>
+<p>
+    Nesta seção entrará o conteúdo mais técnico explicando como será resolvido o problema e criado a solução. Portanto aqui entrará temas mais técnicos sobre a área de dados. 
+</p>
+
+<hr>
+
+<h3 id='contexto'> Pipeline de dados do Projeto  </h3>
+<p>
+    Segue abaixo a arquitetura do pipeline de dados referente a este projeto.
+</p>
+<img src='pipeline.png'>
+<p>
+    Os dados foram obtidos do Kaggle e as tratativas foram realizados através de uma ETL em Python para alimentar o Data Warehouse que consiste em um PostgreSQL instânciado em um RDS na AWS. 
+</p>
+<p>
+    Sobre a utilização dos dados será confecionado um dashboard interativo no Streamlit com deploy em Cloud.
+</p>
+
 <hr>
