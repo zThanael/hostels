@@ -1,50 +1,67 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import connections
 
 # Get Connection with Database
 con = connections.get_connection()
 
-# Create DataFrame
-df = pd.read_sql('''
-select * from hostelworld_hostel hh  where country = 'Brazil' 
-''', con)
+@st.cache_data
+def get_main_df():
+  # Create DataFrame
+  df_raw = pd.read_sql('''
+  select * from hostelworld_hostel hh  where "type" = 'HOSTEL' --and country = 'Brazil'
+  ''', con)
 
+  return df_raw
+
+df_raw = get_main_df()
+
+df = df_raw.copy()
 
 # Streamlit Commands
-st.title('Search Hostel')
+st.text('# Search Hostel')
+
+# Testing SelectBox
+country = st.selectbox(
+    label = "Selecione um Pais: ",
+    options = (df['country'].sort_values().unique()),
+    index = None
+)
+
+if country != None:
+    df = df[df['country'] == country]
+
 
 # Testing SelectBox
 city = st.selectbox(
-    "How would you like to be contacted?",
-    (df['city'].unique())
+    label =  "Selecione uma cidade: ",
+    options = (df['city'].sort_values().unique()),
+    index = None
 )
 
-st.text(city)
+if city != None:
+    df = df[df['city'] == city]
 
-df_map = df[df['city']==city]
+
+#df_map = df[df['city']==city]
 
 # Create Map
 #st.map(data=df_map, latitude='latitude', longitude='longitude', color=None, size=15, zoom=None, use_container_width=True)
 
+
 px.set_mapbox_access_token(open(".mapbox_token").read())
 
-# fig = px.scatter_mapbox(df_map, ,
-#                             lat='latitude', lon='longitude',
-#                             color='type', size=None,
-#                             color_continuous_scale=px.colors.cyclical.IceFire,
-#                             zoom = 2
-#                             )
-# fig.update_traces(textposition='top center')
-
-fig = px.scatter_mapbox(df_map,
+fig = px.scatter_mapbox(df,
                         lat='latitude',
                         lon='longitude',
                         hover_name="name",
-                        color='type',
-                     #   zoom=2
-                       )
+                        zoom = 10 if city else 2.2
+)
 
+
+
+#fig.show()
 
 st.plotly_chart(fig)
