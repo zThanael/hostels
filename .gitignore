@@ -3,6 +3,6 @@
 /hostel_review_data.csv
 /hostel_detail_data.csv
 /countryContinent.csv
-/streamlit/connections.py
-/streamlit/.mapbox_token
+/app/connections.py
+/app/.mapbox_token
 /venv
