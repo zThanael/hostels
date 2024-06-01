@@ -70,7 +70,7 @@
     Mesmo o HostelWorld sendo a mais utilizada ainda é dificil e maçante descobrir quais os hostels existem em determinado local.
 </p>
 <p>
-    Por exemplo, estou planejando minhas viagens para o Peru, e é dificil descobrir quais cidades possuêm hostels, principalmente no HostelWorld pois precisa por cidade. Mas meu objetivo é descobrir quais cidades do Peru que possuem hostels...
+    Por exemplo, estou planejando minhas viagens para o Peru, e é dificil descobrir quais cidades possuêm hostels, principalmente no HostelWorld pois precisa por a cidade e datas. Mas meu objetivo é descobrir quais cidades do Peru possuem hostels...
 </p>
 
 <hr>
