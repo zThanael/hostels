@@ -13,9 +13,12 @@
         </ul>
     </li>
     <li> 
-        <a href='desenvolvimento'> Desenvolvimento </a>
+        <a href='#desenvolvimento'> Desenvolvimento </a>
         <ul>
             <li> <a href='#pipeline'> Data Pipeline  </a> </li>
+            <li> <a href='#etl'> ETL </a> </li>
+            <li> <a href='#der'> DER </a> </li>
+            <li> <a href='#visualizacao'> Visualizações </a> </li>
         </ul>
     </li>
 </ul>
@@ -105,7 +108,7 @@
 
 <hr>
 
-<h3 id = 'der'> ETL - Extract, Transform and Load</h3>
+<h3 id = 'etl'> ETL - Extract, Transform and Load</h3>
 <ul>
     <li>  
         <b> Extract </b>: Os dados usados para este projeto foram obtidos do Kaggle em: <a href='https://www.kaggle.com/datasets/felipejardimf/hotel-reviews-hostelworld'> Hotel Reviews - Hostelworld </a> 
@@ -134,3 +137,25 @@
 <p> 
     Porém, em relação as facilidades de cada Hostel precisei normalizar os dados devido a quantidade, portanto para otimizar o armazenamento dos dados e o desempenho visto que estou usando o Free Tier da AWS, normalizei a tabela <b> hostelworld_hostel_facilities </b> ( <b>880.000 registros </b>) transformando-a em uma tabela fato similar a arquitetura <b> Star Schema </b>.
 </p>
+
+<hr>
+
+<h3 id = 'visualizacao'> Visualizações </h3>
+<p> 
+    Para as visualizações, foi utilizado o <b> Streamlit </b> para criação de uma aplicação web na qual é possível navegar e descobrir os hostels existentes pelo mundo todo.
+</p>
+<blockquote> O código criado no Streamlit está em outro repositório, fazendo parte de um produto. </blockquote>
+<p> 
+    Segue abaixo imagens desta aplicação.
+</p>
+<ul>
+    <li> Tela Principal: <br>
+        <img src='search_hostel_1.png'>
+    </li>
+    <li> Listagem: <br>
+        <img src='search_hostel_2.png'>
+    </li>
+    <li> Visão de Pais: <br>
+        <img src='search_hostel_3.png'> 
+    </li>
+</ul>
